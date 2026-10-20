@@ -1,0 +1,37 @@
+# Website improvements
+
+- [x] Replace the first homepage image with original technology artwork; preserve the next two.
+- [x] Expand professional company, services, AI automation, and delivery-process content.
+- [x] Improve testimonials without presenting invented endorsements as verified.
+- [x] Verify navigation, FAQ, images, and small-screen layout.
+- [x] Add real logo, phone, email and registered address across header, footer and contact page.
+- [x] Add a Products mega-menu (desktop) / accordion (mobile) and a dedicated `/products` page covering university, college and school websites, institution management systems (university/college/school/exam/admission), flat & society management, hospital, hotel, HRMS, and AI automation.
+- [x] Add a shared `ProductsPreview` section to the homepage, reusing the same product data as `/products`.
+- [x] Show real brand logos (React, Next.js, Node.js, TypeScript, Flutter, AWS, PostgreSQL, MongoDB, Docker, Python, n8n via `react-icons`; Azure/OpenAI use a neutral icon since their brand marks aren't available in the open-source icon set) in the "Technologies we work with" marquee instead of plain text pills.
+- [x] Justify body paragraph text site-wide (global base-layer rule); keep short centered eyebrow/caption `<p>` tags unaffected.
+- [x] Add a rule-based `ChatWidget` (Kiji Assistant) — quick-reply topics (services/products/quote/contact) plus free-text FAQ matching with a stopword-filtered keyword matcher, falling back to a WhatsApp handoff with the visitor's message pre-filled when nothing matches. Replaces the standalone floating WhatsApp button.
+- [x] Add `sitemap.xml` + `Sitemap:` line in `robots.txt`.
+- [x] Add JSON-LD `ProfessionalService` structured data (name, logo, phone, email, real registered address) rendered on every page via `__root.tsx`.
+- [x] Add a Google Analytics 4 scaffold (`Analytics.tsx`) that only loads when `VITE_GA_MEASUREMENT_ID` is set — see `.env.example`. No tracking ID is wired in yet.
+- [x] Add a `/blog` section (index + 3 genuine, non-fabricated articles on choosing a management system, AI automation, and tech-stack decisions) for SEO content and to link back to Products/Services/Contact.
+- [ ] CIN / company registration number: intentionally **not** added — the company's real CIN could not be found or verified (MCA registry search returned no match for this name/location), so a placeholder has not been fabricated. Add it to `contact` in `data.ts` once you have the real number, and it can be surfaced in the footer.
+- [ ] Google Business Profile: this is an external Google account action (business verification, postcard/phone code), not something this codebase can do — set it up directly at business.google.com with the address/phone in `data.ts`.
+- [ ] Real client testimonials / case studies: still intentionally left as labelled illustrative placeholders — swap in real client quotes, names and project outcomes as they become available, per the testimonial-integrity rule in `AGENTS.md`.
+- [x] Remove the black background baked into the supplied logo PNG (luminance-keyed transparency cutout via `sharp`, trimmed and re-exported) and enlarge it in the header (44px → 56px) and footer (40px → 48px).
+- [x] Increase nav font size (text-sm → text-base) and add an animated underline hover effect (shared `navLinkClass` / `NavUnderline`) across all desktop nav links and the Products dropdown trigger.
+- [x] Dedicated detail pages for all 13 products (`/products/$slug`) and 9 services (`/services/$slug`) — overview, key benefits, who it's for, 6 modules/deliverables, tech stack (services), FAQs, related items and CTAs. Content lives in `src/components/site/details.ts`; layout in the shared `DetailPage.tsx`.
+- [x] Services mega-menu added alongside Products; all product/service cards, nav menus (desktop + mobile), footer columns and the sitemap (31 URLs) now link to the detail pages.
+- [x] Replaced unverifiable homepage stats ("8+ years", "98% happy clients", "350+ projects", "30+ experts") with verifiable figures (service lines, product count, technologies, free consultation). Put real numbers back in `stats` in `src/routes/index.tsx` once you can back them up.
+- [x] Added a shared "Flexible engagement models" section (fixed-scope, dedicated team, AMC + four written commitments) on Home and Services — review the wording to make sure it matches how you actually sell.
+- [x] Contact form now has an "I'm interested in" selector (all services/products) included in the WhatsApp message.
+- [x] Fixes: router scrolls instantly to top on navigation (smooth-scroll CSS was interrupting it); justify rule no longer overrides centred text blocks.
+- [x] `/technologies` page with a categorised stack (Frontend, Backend, Databases, AI & ML, Cloud & DevOps, Mobile, Integrations) — 50 technologies incl. Next.js, Python/Django, FastAPI, Node.js/NestJS, PHP/Laravel, PostgreSQL, MySQL, MongoDB, Redis, OpenAI, Claude, Gemini, LangChain, Docker, Kubernetes, AWS, GCP, Azure. Data in `src/components/site/tech-stack.ts`; homepage marquee and JSON-LD `knowsAbout` read from it.
+- [x] `/hire-developers` page (8 developer roles, hiring models, process, FAQs) to win freelance / staff-augmentation work; linked from nav, Services dropdown, footer, Technologies page and the chatbot.
+- [x] New "Student & Learning Products" category: **StudyMate** (AI learning companion for Class 1–5) and **Online Test Platform**, each with a full detail page, plus a homepage spotlight section.
+- [x] Production polish: branded `og-image.jpg` + Open Graph/Twitter image tags, security headers (nosniff, referrer-policy, permissions-policy, HSTS) in `src/server.ts`, Privacy Policy and Terms of Use pages, sitemap (37 URLs), expanded FAQs, updated service tech stacks, desktop nav moved to the `lg` breakpoint so it never overflows on tablets.
+- [ ] Have the Privacy Policy and Terms reviewed by a legal adviser before relying on them.
+- [ ] StudyMate and the Online Test Platform are described as product offerings — confirm the features listed match what will actually be delivered, and add real screenshots/demo links when available.
+- [x] Lead-to-email notification: a TanStack Start server function (`src/lib/notify.ts`) emails the Kiji team (via Resend) whenever the contact form or the chat assistant's lead-capture card is submitted. Gated behind `RESEND_API_KEY` (see .env.example) — until it's set, the visitor-facing flow (WhatsApp / confirmation message) still works exactly the same, the email notification just silently doesn't fire (logged server-side only).
+- [x] Chatbot "Get a callback" lead-capture card: appears after "Get a free quote", "Hire a developer", or any unmatched free-text question — collects name + phone inline, submits to the same email notification function, shows a confirmation message in the chat, dismissible.
+- [x] Chatbot polish: typing indicator (animated dots) while the bot "thinks", input auto-focuses when the panel opens.
+- [ ] **Action needed to receive emails:** sign up at resend.com (free tier), verify your email, get an API key, then set `RESEND_API_KEY` (and optionally `RESEND_FROM_EMAIL` once your domain is verified in Resend) wherever this site is deployed. No code change needed — it activates automatically.
