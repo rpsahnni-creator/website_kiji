@@ -8,7 +8,7 @@ import { services } from "@/components/site/data";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Services — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

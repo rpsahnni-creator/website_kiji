@@ -9,7 +9,7 @@ import img from "@/assets/contact.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Contact — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

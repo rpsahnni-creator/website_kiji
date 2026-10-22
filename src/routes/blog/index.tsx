@@ -6,7 +6,7 @@ import { blogPosts } from "@/components/site/blog-data";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Blog — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

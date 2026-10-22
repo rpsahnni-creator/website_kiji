@@ -28,7 +28,7 @@ import servicesImg from "@/assets/services.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kiji Technology OPC Pvt. Ltd. — Web, App, Management Systems & AI" },
+      { title: "Kiji Technology OPC Private Limited — Web, App, Management Systems & AI" },
       {
         name: "description",
         content:

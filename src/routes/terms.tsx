@@ -6,7 +6,7 @@ import { contact } from "@/components/site/data";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Terms of Use — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content: "Terms governing the use of the Kiji Technology OPC Private Limited website.",

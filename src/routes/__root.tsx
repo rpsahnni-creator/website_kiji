@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kiji Technology OPC Pvt. Ltd." },
+      { title: "Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

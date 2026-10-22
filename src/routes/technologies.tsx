@@ -7,7 +7,7 @@ import { techStack, allTech } from "@/components/site/tech-stack";
 export const Route = createFileRoute("/technologies")({
   head: () => ({
     meta: [
-      { title: "Technologies — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Technologies — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

@@ -34,7 +34,7 @@ export function Logo() {
       <span className="leading-tight">
         <span className="block font-display text-lg font-bold">Kiji Technology</span>
         <span className="block text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          OPC Pvt. Ltd.
+          OPC Private Limited
         </span>
       </span>
     </Link>
@@ -356,7 +356,7 @@ function Footer() {
               height={52}
               className="h-12 w-12 shrink-0 object-contain"
             />
-            <span className="font-display text-xl font-bold">Kiji Technology OPC Pvt. Ltd.</span>
+            <span className="font-display text-xl font-bold">Kiji Technology OPC Private Limited</span>
           </div>
           <p className="mt-4 max-w-md text-sm opacity-75">
             Building smart websites, apps, management systems and AI automation that help

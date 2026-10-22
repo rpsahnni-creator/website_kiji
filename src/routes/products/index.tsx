@@ -7,7 +7,7 @@ import { ProductsGrid } from "@/components/site/Products";
 export const Route = createFileRoute("/products/")({
   head: () => ({
     meta: [
-      { title: "Products — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Products — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

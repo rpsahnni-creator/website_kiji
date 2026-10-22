@@ -7,7 +7,7 @@ import about from "@/assets/about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Kiji Technology OPC Pvt. Ltd." },
+      { title: "About Us — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

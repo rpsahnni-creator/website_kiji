@@ -6,7 +6,7 @@ import { contact } from "@/components/site/data";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Privacy Policy — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:

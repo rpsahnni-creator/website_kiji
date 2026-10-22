@@ -24,7 +24,7 @@ import { contact } from "@/components/site/data";
 export const Route = createFileRoute("/hire-developers")({
   head: () => ({
     meta: [
-      { title: "Hire Dedicated Developers — Kiji Technology OPC Pvt. Ltd." },
+      { title: "Hire Dedicated Developers — Kiji Technology OPC Private Limited" },
       {
         name: "description",
         content:
